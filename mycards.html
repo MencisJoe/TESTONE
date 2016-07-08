@@ -7,11 +7,12 @@ margin: 200px  250px;
 }
 .card{
 width:150px;
-height:150px;
+height:175px;
 float:left;
 background-color:#69732B;
 margin-left:10px;
 text-align:center;
+border-radius:10px;
 }
 .wrap #card-1{
 transform:rotate(-40deg);
@@ -22,6 +23,8 @@ top:40px;
 .wrap #card-2{
 transform:rotate(-20deg);
 z-index:2;
+left:70px;
+top:10px;
 }
 .wrap #card-3{
 z-index:3;
@@ -29,34 +32,39 @@ z-index:3;
 .wrap #card-4{
 transform:rotate(20deg);
 z-index:2;
+right:70px;
+top:10px;
 }
 .wrap #card-5{
 transform:rotate(40deg);
 z-index:1;
+right:100px;
+top:40px;
 }
 [id|=card]:hover{
 transform:scaleX(2,2);
+background-color:red;
 }
 </style>
 <body>
 <div class="wrap">
-<div class="card" id="card-1"><br><br>
+<div class="card" id="card-1"><br><br><br>
 <a href="#" class="card-1">Card-1</a>
 <h2>I am card 1</h2> 
 </div>
-<div class="card" id="card-2"><br><br>
+<div class="card" id="card-2"><br><br><br>
 <a href="#" class="card-2">Card-2</a>
 <h2>I am card 2</h2> 
 </div>
-<div class="card" id="card-3"><br><br>
+<div class="card" id="card-3"><br><br><br>
 <a href="#" class="card-3">Card-3</a>
 <h2>I am card 3</h2> 
 </div>
-<div class="card" id="card-4"><br><br>
+<div class="card" id="card-4"><br><br><br>
 <a href="#" class="card-4">Card-4</a>
 <h2>I am card 4</h2> 
 </div>
-<div class="card" id="card-5"><br><br>
+<div class="card" id="card-5"><br><br><br>
 <a href="#" class="card-5">Card-5</a>
 <h2>I am card 5</h2> 
 </div>
