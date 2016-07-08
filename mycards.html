@@ -1,10 +1,9 @@
 <html>
 <style>
 .wrap{
-background:gray;
+background:#202020;
 width:1000px;
-margin:auto;
-margin-top:200px;
+margin: 200px  250px;
 }
 .card{
 width:150px;
@@ -14,29 +13,47 @@ background-color:#69732B;
 margin-left:10px;
 text-align:center;
 }
-a,.card h2{
-padding-top:20px;
+.wrap #card-1{
+transform:rotate(-40deg);
+z-index:1;
+left:150px;
+top:40px;
+}
+.wrap #card-2{
+transform:rotate(-20deg);
+z-index:2;
+}
+.wrap #card-3{
+z-index:3;
+}
+.wrap #card-4{
+transform:rotate(20deg);
+z-index:2;
+}
+.wrap #card-5{
+transform:rotate(40deg);
+z-index:1;
 }
 </style>
 <body>
 <div class="wrap">
-<div class="card">
+<div class="card" id="card-1"><br><br>
 <a href="#" class="card-1">Card-1</a>
 <h2>I am card 1</h2> 
 </div>
-<div class="card">
+<div class="card" id="card-2"><br><br>
 <a href="#" class="card-2">Card-2</a>
 <h2>I am card 2</h2> 
 </div>
-<div class="card">
+<div class="card" id="card-3"><br><br>
 <a href="#" class="card-3">Card-3</a>
 <h2>I am card 3</h2> 
 </div>
-<div class="card">
+<div class="card" id="card-4"><br><br>
 <a href="#" class="card-4">Card-4</a>
 <h2>I am card 4</h2> 
 </div>
-<div class="card">
+<div class="card" id="card-5"><br><br>
 <a href="#" class="card-5">Card-5</a>
 <h2>I am card 5</h2> 
 </div>
