@@ -1,0 +1,49 @@
+<html>
+<style>
+.flipContainer
+{
+perspective:1000px;
+}
+.flipContainer:hover .flipper, .flipContainer.hover .flipper
+{
+transform:rotateY(180deg);
+}
+.flipContainer, .front, .back
+{
+width:320px;
+height:480px;
+}
+.flipper
+{
+transition:0.6s;
+transform-style:presere-3d;
+position:relative;
+}
+.front, .back
+{
+backface-visibility: hidden;
+position:absolute;
+top:0;
+left:0;
+}
+.front
+{
+z-idex:2;
+transformY(0deg);
+}
+.back
+{
+transform:rotateY(180deg);
+}
+</style>
+<body>
+<div class="flipContainer" ontouchstart="this.classList.toggle('hover');">
+<div class="flipper">
+<div class="front">
+</div>
+<div class="back">
+</div>
+</div>
+</div>
+</body>
+</html>

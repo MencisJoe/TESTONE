@@ -1,0 +1,147 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<style>
+.persons {
+margin-left:50%;
+color:red;
+}
+.roles{
+margin-left:65%;
+color:rgb(151,147,215);
+}
+.course{
+margin-left:63%;
+color:yellow;
+}
+.leftpane{
+background-color:rgb(64, 64, 64);
+max-width: 25%;
+height:100%;
+}
+.fa{
+margin-left:2%;
+}
+ul li{
+list-style-type:none;
+padding-left:0%;
+}
+ul li .combine:hover{
+background-color:rgba(161, 203, 224, 0.4);
+}
+.footer{
+margin-top:80%;
+padding-left:30%;
+}
+.complete {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+}
+.userinfo {
+    margin-left: 26%;
+    padding:10px;
+    width: 70%;
+    height: 10%;
+    border:1px solid;animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+.javascript {
+    margin-left: 26%;
+    padding:10px;
+    width: 70%;
+    height: 10%;
+    border:1px solid;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+.html {
+    margin-left: 26%;
+    padding:10px;
+    width: 70%;
+    height: 12%;
+    border:1px solid;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+.css {
+    margin-left: 26%;
+    padding:10px;
+    width: 70%;
+    height: 10%;
+    border:1px solid;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+.css3 {
+    margin-left: 26%;
+    padding:10px;
+    width: 70%;
+    height: 10%;
+    border:1px solid;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+div.leftpane {
+    float:left;
+    width:30%;
+    height:100%;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    75%  {background-color: green;}
+    100% {background-color: red;}
+}
+</style>
+<body>
+<div class="complete">
+<aside>
+<div class="leftpane">
+<i class="fa fa-user" style="font-size:60px;color:rgba(119,181,171,0.5);"></i><a href="#userinfo" class="persons">Santhosh</a><br>
+<span class="roles">css trainee</span><br><br>
+<i class="fa fa-user" style="font-size:60px;color:rgba(119,181,171,0.5);"></i><a href="#userinfo" class="persons">Preethi</a><br>
+<span class="roles">css trainer</span><br><br>
+<ul class="courselist">
+<li><div class="combine"><i class="fa fa-book" style="font-size:25px;color:rgba(119,181,171,0.5);"></i><a href="#javascript" class="course">Javascript</a><br></div></li>
+<li><div class="combine"><i class="fa fa-book" style="font-size:25px;color:rgba(119,181,171,0.5);"></i><a href="#html" class="course">HTML</a><br></div></li>
+<li><div class="combine"><i class="fa fa-book" style="font-size:25px;color:rgba(119,181,171,0.5);"></i><a href="#css" class="course">CSS</a><br></div></li>
+<li><div class="combine"><i class="fa fa-book" style="font-size:25px;color:rgba(119,181,171,0.5);"></i><a href="#css3" class="course">CSS3</a></div></li>
+</ul>
+<div class="footer">
+<a href="http://www.twitter.com" target="blank"><i class="fa fa-twitter" style="color:green"></i></a>
+<a href="http://www.facebook.com" target="blank"><i class="fa fa-facebook" style="color:green"></i></a>
+<a href="http://www.instagram.com" target="blank"><i class="fa fa-instagram" style="color:green"></i></a>
+<a href="http://www.youtube.com" target="blank"><i class="fa fa-youtube" style="color:green"></i></a>
+<a href="http://www.plus.google.com" target="blank"><i class="fa fa-google-plus" style="color:green"></i></a>
+</div>
+</div>
+</aside>
+<section class="userinfo" id="userinfo">
+<pre><marquee direction=right>Hi This is <b>Santhosh</b>. I am learning css.</marquee></pre>
+<pre><marquee direction=left>Hi This is <b>Preethi</b>. I am the trainer.</marquee></pre>
+</section><br><br>
+<section class="javascript" id="javascript">
+<p><marquee direction=right>JavaScript is the programming language of HTML and the Web. Programming makes computers do what you want them to do. JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced.</marquee></p>
+</section><br><br>
+<section class="html" id="html">
+<p><marquee direction=left>HTML is a markup language for describing web documents (web pages). HTML stands for Hyper Text Markup Language. A markup language is a set of markup tags. HTML documents are described by HTML tags. Each HTML tag describes different document content.</marquee></p>
+</section><br><br>
+<section class="css" id="css"> 
+<p><marquee direction=right>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.</marquee></p>
+</section><br><br>
+<section class="css3" id="css3">
+<p><marquee direction=left>CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.</marquee></p>
+</section>
+</div>
+</body>
+</html>

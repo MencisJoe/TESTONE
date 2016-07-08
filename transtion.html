@@ -1,0 +1,42 @@
+<html>
+<style>
+div
+{
+border:2px dotted red;
+padding:5px;
+width:150px;
+transition: background-color 5s, width 5s;
+}
+div:hover
+{
+background-color:green;
+width:250px;;
+}
+#linear
+{
+transition-timing-function:linear;
+}
+#ease
+{
+transition-timing-function:ease;
+}
+#easein
+{
+transtion-timing-function:ease-in;
+}
+#easeout
+{
+transtion-timing-function: ease-out;
+}
+#easeinout{
+transition-timing-function:ease-in-out;
+}
+</style>
+<body>
+<div id="linear"> This div uses linear transition function </div><br>
+<div id="ease"> This div uses ease transition function </div><br>
+<div id="easein"> This div uses ease in transtion function </div><br>
+<div id="easeout"> This div uses ease out transition function </div><br>
+<div id="easeinout"> This div uses ease in out transtion function </div>
+<body>
+</html>

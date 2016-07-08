@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+.accordian, .accordian ul, .accordian li, .accordian a, .accordian span{
+margin:0;
+padding:0:
+border: none;
+outline: none;
+}
+
+.accordian li{
+list-style-type: none;
+}
+
+.accordian li > a{
+display: block;
+position: relative;
+min-width: 110px;
+padding: 0 10px 0 40px;
+font: bold 12px/32px Arial, sans-serif;
+color: #fdfdfd;
+text-decoration: none;
+text-shadow: 0px 1px 0px rgba(0,0,0,0.35);
+background: #6c6e74;
+background: linear-gradient(top, #6c6e74 0%, #4b4d51 100%);
+box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .1), 0px 1px 0px 0px rgba(0,0,0, .1);
+}
+
+.accordian li > a span{
+display: block;
+position: absolute;
+top: 7px;
+right: 0;
+padding 0 10px;
+margin-right: 10px;
+font:normal bold 12px/18px Arial, sans-serif;
+background: #404247;
+border-radius: 5px;
+box-shadow: 1px 1px 1px rgba(0,0,0,0.2),1px 1px 1px rgbs(255,255,255,0.1);
+}
+
+.accordian > li > a:before{
+position:absolute;
+top:0;
+left:0;
+content:'';
+width: 24px;
+height: 24px;
+margin: 4px 8px;
+background-repeat: no-repeat;
+background-image: url("C:\Users\Rempar\Desktop\mail.png");
+background-position: 0px 0px;
+}
+</style>
+</head>
+<body>
+<ul class="accordian">
+<li id="one" class="file"><a href="#one">My Files <span>495</span> </a></li>	
+<li id="two" class="mail"><a href="#two">Mail <span> 26 </span></a></li>
+<li id="three" class="cloud"><a href="#three"> Cloud <span>58</span></a></li>
+<li id="four" class="sign"><a href="#four">Sign Out</a></li>
+</ul>
+</body>
+</html>

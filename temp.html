@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<input type ="button" onclick="showdate()" value="click">
+<p id="demo"></p>
+<script>
+function showdate()
+{
+var newdate=new Date();
+var curmonth= newdate.getMonth()+1;
+var curdate=newdate.getDate();
+var curday=newdate.getDay();
+document.getElementById('demo').innerHTML = curmonth +" " + curdate +" " + curday;
+}
+</script>
+</body>
+</html>
