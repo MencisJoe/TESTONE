@@ -1,0 +1,56 @@
+<html>
+<style>
+#first{
+position:relative;
+width:500px;
+height:400px;
+margin-left:28%;
+overflow:hidden;
+}
+#first img{
+position:absolute;
+left:0;
+transition: opacity 1s ease-in-out;
+}
+#top1:hover{
+opacity:0;	
+}
+#second{
+position:relative;
+width:500px;
+height:400px;
+margin-left:28%;
+overflow:hidden;
+}
+#second img{
+position:absolute;
+left:0;
+transition: opacity 1s ease-in-out;
+}
+#second img.transparent{
+opacity:0;
+}
+#click{
+text-align:center;
+cursor:pointer
+}
+</style>
+<body>
+<div id="first">
+<img id="bottom1" src="http://img.khelnama.com/sites/default/files/mediaimages/gallery/2012/Dec/Sachin,%20SA,%202010.jpg"/>
+<img id="top1" src="http://ste.india.com/sites/default/files/2016/04/23/481745-sourav-ganguly-young.jpg"/>
+</div><br>
+<div id="second">
+<img id="bottom2" src="http://img.khelnama.com/sites/default/files/mediaimages/gallery/2012/Dec/Sachin,%20SA,%202010.jpg"/>
+<img id="top2" src="http://ste.india.com/sites/default/files/2016/04/23/481745-sourav-ganguly-young.jpg"/>
+</div>
+<p id="click">Click me to toggle</p>
+</body>
+<script>
+$(document).ready(function() {
+  $("#click").click(function() {
+  $("#second img#top2").toggleClass("transparent");
+});
+});
+</script>
+</html>
