@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Layout2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+body{
+font:20px Montserrat, sans-serif;
+line-height=1.8;
+color: #f5f6f7;
+}
+p{
+font-size:16px;	
+}
+.margin {margin-bottom: 45px;}
+.bg-1 {
+background-color: #1abc9c; /* Green */
+color: #ffffff;
+}
+.bg-2 {
+background-color: #474e5d; /* Dark Blue */
+color: #ffffff;
+}
+.bg-3 {
+background-color: #ffffff; /* White */
+color: #555555;
+}
+.bg-4 {
+background-color: #2f2f2f; /* Black Gray */
+color: #fff;
+}
+.container-fluid {
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.navbar {
+padding-top: 15px;
+padding-bottom: 15px;
+border: 0;
+border-radius: 0;
+margin-bottom: 0;
+font-size: 12px;
+letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+color: #1abc9c !important;
+}
+.myp{
+color:gray;
+line-height:150%;
+}
+</style>
+
+<body>
+	<nav class="navbar navbar-default">
+	<div class="container>
+		<div class="navbar-header">
+		 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+		 <span class="icon-bar"></span>
+		 <span class="icon-bar"></span>
+		 <span class="icon-bar"></span>
+		 </button>
+		 <a href="#" class="navbar-brand">Me</a>
+		</div>
+			<div class="navbar navbar-collapse" id="myNavBar">
+			<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">WHO</a></li>
+			<li><a href="#">WHAT</a></li>
+			<li><a href="#">WHERE</a></li>
+			</ul>
+			</div>
+	</div>
+	</nav>
+	
+	<div class="container-fluid bg-1 text-center">
+	 <h3 class="margin">Who Am I</h3>
+	 <img src="http://st2.cricketcountry.com/wp-content/uploads/cricket/e16c3f75ffa72c645e030419e29871ab.jpeg" class="img-responsive img-circle margin" alt="sachin" style="display:inline" width="350" height="350">
+	 <h3> I am a cricketer </h3>
+    </div>
+	
+	<div class="container-fluid bg-2 text-center">
+	<h3 class="margin">What Am I</h3>
+		<div class="well">
+		<p class="myp"> Thanks to Sachin Tendulkar, we started to dare and dream. When he blasted the blinding pace of Allan Donald and company in Cape Town, we knew we can catch up with a world that had hitherto seemed too fast for our liking. When he tore into Warne in Chennai, we knew we were better than the very best. When he stood up to Wasim and Waqar in Sharjah, we knew we can be dignified neighbours. When he launched into Shoaib Akhtar in Centurion, we knew the phantasmagoria of Miandad had been laid to rest.</p>
+		<a href="#" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-search"></span>Search</a>
+		</div>	
+	</div>
+	
+	<div class="container-fluid bg-3 text-center">
+	<h3 class="margin">How to play cricket?</h3>
+		<div class="row">
+			<div class="col-sm-4">
+			<h2>Straight Drive</h2>
+			<img src="http://images.mid-day.com/2013/aug/Sachin-Tendulkar_1.jpg" alt="straight" height="350" width="350" class="img-responsive img-thumbnail">
+			</div>
+			<div class="col-sm-4">
+			<h2>Pull Shot</h2>
+			<img src="http://www.justsachin.com/wp-content/uploads/2010/07/126.-Compaq-Cup-Sachin-Playing-Pull-Shot.jpg" alt="pull" height="350" width="350" class="img-responsive img-thumbnail">
+			</div>
+			<div class="col-sm-4">
+			<h2>Defence</h2>
+			<img src="http://img01.ibnlive.in/ibnlive/uploads/2013/11/tendulkar-afp-630.jpg" alt="defence" height="350" width="350" class="img-responsive img-thumbnail">
+			</div>
+		</div>
+	</div>
+	
+<footer class="container-fluid bg-4 text-center">
+<div class="jumbotron">
+<p class="myp">Playing it my way</p>
+</div>
+</footer>
+</body>
+</html>
+		
