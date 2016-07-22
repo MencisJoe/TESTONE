@@ -3,6 +3,7 @@
 <body>
 Enter the input:<input type="text" id="inp"><br><br>
 The correct expression is:<input type="text" id="out"><br><br>
+The correct expression2 is:<input type="text" id="out1"><br><br>
 <input type="button" id="submit" value="clickme" onclick="replacespaces()">
 </body>
 <script>
@@ -15,6 +16,8 @@ var re=new RegExp("^[a-zA-Z0-9]+$");
 var res = inp.replace(/ /g, "");
 var result = res.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g,"");
 document.getElementById("out").value=result;
+var inp1=inp.replace(/[^a-zA-z0-9]/g,"");
+document.getElementById("out1").value=inp1;
 }
 </script>
 </html>
