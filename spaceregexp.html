@@ -9,9 +9,12 @@ The correct expression is:<input type="text" id="out"><br><br>
 function replacespaces()
 {
 var inp=document.getElementById("inp").value;
-var re=new RegExp("^[a-zA-Z0-9]{3}-[0-9]{3}$");
-document.getElementById("out").value="test";
-re.test(inp);
+var re=new RegExp("^[a-zA-Z0-9]+$");
+/*re.test(inp);*/
+/*alert(re.test(inp));*/
+var res = inp.replace(/ /g, "");
+var result = res.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g,"");
+document.getElementById("out").value=result;
 }
 </script>
 </html>
