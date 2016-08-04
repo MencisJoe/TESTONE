@@ -49,14 +49,14 @@
 	font-weight:bold;
 	}
 	.most{
-	width:20%;
+	/*width:20%;*/
 	border-left:1px solid;
 	border-top:1px solid;
 	border-bottom:1px solid;
 	}
 
 	.most1{
-	width:10%;
+	/*width:10%;*/
 	border-right:1px solid;
 	border-top:1px solid;
 	border-bottom:1px solid;
@@ -111,6 +111,12 @@
 	#limove{
 	margin-left:550px;
 	}
+	#topsearchglyp{
+	position:absolute;
+	}
+	#onev, #twov, #threev{
+	padding-left:45px;
+	}
 	</style>
 
 	<body>
@@ -136,7 +142,7 @@
 				</div>
 				<div class="col-sm-8">
 				<h1>How can we help you today?</h1>
-				<input type="text" placeholder="Search here" id="topsearch"><span class="glyphicon glyphicon-search"></span>
+				<input type="text" placeholder="Search here" id="topsearch"><span class="glyphicon glyphicon-search" id="topsearchglyp"></span>
 				<button class="btn btn-danger btn-lg">Lets Go<span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span></button>
 				</div>
 			</div>	
@@ -181,28 +187,28 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-3 most">
+				<div class="col-sm-3 most" id="onev">
 				<h4>Use the verizon cloud</h4>
 				<p>Welcome to Verizon</p>
 				<p>Learn more<span class="glyphicon glyphicon-chevron-right"></span></p>
 				</div>
-				<div class="col-sm-1 most1">
+				<div class="col-sm-1 most1" id="oneve">
 				<img class="img-circle img-responsive" src="http://netdna.webdesignerdepot.com/uploads/2012/10/20_cloud_comment.jpg" height="200" width="150">
 				</div>
-				<div class="col-sm-3 most">
+				<div class="col-sm-3 most" id="twov">
 				<h4>Set top box upgrade</h4>
 				<p>Upgrade your set top box</p>
 				<p>Learn more<span class="glyphicon glyphicon-chevron-right"></span></p>
 				</div>
-				<div class="col-sm-1 most1">
+				<div class="col-sm-1 most1" id="twove">
 				<img class="img-circle img-responsive" src="http://core0.staticworld.net/images/article/2014/12/satechi_smart_box_remote-100537764-large.jpg" height="200" width="150">
 				</div>
-				<div class="col-sm-3 most">
+				<div class="col-sm-3 most" id="threev">
 				<h4>E-Commerce</h4>
 				<p>E-shopping is more fun</p>
 				<p>Learn more<span class="glyphicon glyphicon-chevron-right"></span></p>
 				</div>
-				<div class="col-sm-1 most1">
+				<div class="col-sm-1 most1" id="threeve">
 				<img class="img-circle img-responsive" src="http://www.hemsmail.com/wp-content/uploads/2015/02/Retail-eCommerce-Icon.png" height="200" width="150">
 				</div>
 			</div>
