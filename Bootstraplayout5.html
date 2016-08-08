@@ -14,9 +14,24 @@ list-style-type:none;
 }
 .buttons li{
 display:inline-block;
-border:1px solid;
-padding:10px;
-height:80px;
+float: left;
+height: 80px;
+padding: 10px;
+border: 1px solid #ddd;
+}
+.bclass{
+clear:both;
+margin-top:70px;
+}
+.buttonclasses{
+list-style-type:none;
+}
+.buttonclasses li{
+display:inline;
+height: 60px;
+padding: 10px;
+border: 1px solid #ddd;
+float:left;
 }
 </style>
 <body>
@@ -109,6 +124,27 @@ height:80px;
 <li><a href="#" class="btn btn-primary btn-sm">btn-sm</a></li>
 <li><a href="#" class="btn btn-primary btn-md">btn-md</a></li>
 <li><a href="#" class="btn btn-primary btn-lg">btn-lg</a></li>
+</ul><br><br>
+<h1 class="bclass">Button Classes</h1>
+<ul class="buttonclasses">
+<li><a href="#" class="btn btn-default">Default</a></li>
+<li><a href="#" class="btn btn-primary">Primary</a></li>
+<li><a href="#" class="btn btn-success">Success</a></li>
+<li><a href="#" class="btn btn-info">Info</a></li>
+<li><a href="#" class="btn btn-warning">Warning</a></li>
+<li><a href="#" class="btn btn-danger">Danger</a></li>
+<li><a href="#" class="btn btn-disabled">Disabled</a></li>
+<li><a href="#" class="btn btn-link">Link</a></li>
+<li><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Dropdown<span class="caret"></span></button>
+<ul class="dropdown-menu">
+<li>Action</li>
+<li>Another Action</li>
+<li>Something else here</li>
+<li><hr></li>
+<li>Separated link</li>
+</ul>
+</li>
+<li><a class="btn btn-info" href="#"><i class="glyphicon glyphicon-map-marker"></i>Icon</a></li>
 </ul>
 </div>
 </body>
