@@ -8,7 +8,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
+<style>
+.buttons{
+list-style-type:none;
+display:block;
+}
+</style>
 <body>
 <div class="container">
 <div class="jumbotron text-center">
@@ -28,7 +33,7 @@
 	</div>
 </div>
 <div class="col-lg-6">
-	<h3>Bootstrap Framework<h3>
+	<h3>Bootstrap Framework</h3>
 	<p>In simple terms, a responsive web design figures out what resolution of device it's being served on. Flexible grids then size correctly to fit the screen.</p>
 	<p>The new Bootstrap 3 promises to be a smaller build. The separate Bootstrap base and responsive.css files have now been merged into one. There is no more fixed grid, only fluid.</p>
 	<hr>
@@ -37,6 +42,69 @@
 	<footer>Quasipickle</footer>
 	</blockquote>	
 </div>
+<h1>Bootstrap 3 Navbar</h1>
+<hr>
+
+<nav class="navbar navbar-default">
+<div class="navbar-header">
+	<a class="navbar-brand" href="#">Title</a>
+</div>
+<ul class="nav navbar-nav">
+<li><a href="#">Home</a></li>
+<li><a href="#">Link</a></li>
+<li><a href="#">Link</a></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">Action</a></li>
+<li><a href="#">One more separated link</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Link</a></li>	
+</ul>
+</nav>
+<br>
+<nav class="navbar navbar-inverse">
+<div class="navbar-header">
+	<a class="navbar-brand" href="#">Title</a>
+</div>
+<ul class="nav navbar-nav">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">Link</a></li>
+<li><a href="#">Link</a></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="#">Action</a></li>
+<li><a href="#">One more separated link</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#">Link</a></li>
+</ul>
+</nav><br><br>
+<h1>Grid</h1>
+<h3>Bootstrap 3 scaffolding has changed for improved display on mobile devices</h3>
+<hr>
+<div class="well col-lg-12">col-lg-12</div>
+<div class="well col-lg-4">col-lg-4</div>
+<div class="well col-lg-4">col-lg-4</div>
+<div class="well col-lg-4">col-lg-4</div>
+<div class="well col-lg-6">col-lg-6</div>
+<div class="well col-lg-6">col-lg-6</div>
+<div class="well col-lg-9 col-sm-6">col-lg-9/col-sm-6</div>
+<div class="well col-lg-3 col-sm-6">col-lg-3/col-sm-6</div>
+<h1>Bootstrap 3 Buttons</h1>
+<h3>With no gradients and borders, Bootstrap 3.0 buttons now have a flatter look</h3>
+<hr>
+<h1>Button Sizes (4)</h1>
+<ul class="buttons">
+<li><a href="#" class="btn btn-primary btn-xs">btn-xs</a></li>
+<li><a href="#" class="btn btn-primary btn-sm">btn-sm</a></li>
+<li><a href="#" class="btn btn-primary btn-md">btn-md</a></li>
+<li><a href="#" class="btn btn-primary btn-lg">btn-lg</a></li>
+</ul>
 </div>
 </body>
 </html>
