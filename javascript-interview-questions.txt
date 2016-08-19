@@ -227,7 +227,7 @@ Note: forEach() does not execute the function for array elements without values.
 
 ------------------------------------
 
-19) xml and jsom, which is better
+19) xml and json, which is better
 
 ------------------------------------
 
