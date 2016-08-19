@@ -1,0 +1,180 @@
+1) What is var in javascript?
+var keyword declares a variable in the current scope
+
+// These are both globals
+var foo = 1;
+bar = 2;
+
+function()
+{
+    var foo = 1; // Local
+    bar = 2;     // Global
+}
+Local variables are always faster than the variables in global scope.
+If you do not use var to declare a variable, the variable will be in global scope.
+
+-------------------------------------
+
+2)  What is global variable and how to access global variable and a variable within a function of same name?
+
+using window.value we can access global variable
+
+value=50;//global variable  
+function a(){  
+var value = 5;
+alert(value);  
+alert(window.value);
+}  
+
+-------------------------------------
+
+
+3) What is the difference between undefined and not defined in JavaScript?
+
+In JavaScript, if you try to use a variable that doesn't exist and has not been declared, then JavaScript will throw an error var name is not defined and script will stop executing. However, if you use typeof undeclared_variable, then it will return undefined.
+
+
+-------------------------------------
+
+4) What are the Datatypes in javascript?
+
+Primitive and non-primitive data type
+
+Primitive data are only single values.
+String
+Number
+Boolean
+Undefined
+Null
+
+Non-primitive data types are used to store the group of values.
+Object
+Array
+RegExp
+
+-------------------------------------
+
+5) What happens if two functions having same in javascript?
+
+The second function will be executed.
+
+value=50;//global variable  
+function a(){  
+var value = 5;
+alert(value);  
+alert(window.value);
+}  
+function a(){  
+alert(value);  
+}  
+
+a();
+
+This will alert 50 alone.
+
+-------------------------------------
+
+6) How to create object in javascript?
+
+Objects are variables too. But objects can contain many values.
+
+The values are written as name : value pairs (name and value separated by a colon).
+Example
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; 
+
+-------------------------------------
+
+7) How to check if a variable is an object or not?
+
+If typeof yourVariable === 'object', it's an object or null. If you want to exclude null, just make it yourVariable !== null && typeof yourVariable === 'object'.
+
+-------------------------------------
+
+8) What is the difference between declaring a number variable using var x = 123 and using new keyword var y = new Number(123)
+
+Normally JavaScript numbers are primitive values created from literals: var x = 123
+
+But numbers can also be defined as objects with the keyword new: var y = new Number(123)
+Example
+var x = 123;
+var y = new Number(123);
+
+// typeof x returns number
+// typeof y returns object
+
+Do not create Number objects. It slows down execution speed.
+
+(Ask what it will return when we compare that using == and ===)
+
+When using the == equality operator, equal numbers looks equal:
+Example
+var x = 500;             
+var y = new Number(500);
+
+// (x == y) is true because x and y have equal values
+
+When using the === equality operator, equal numbers are not equal, because the === operator expects equality in both type and value.
+Example
+var x = 500;             
+var y = new Number(500);
+
+// (x === y) is false because x and y have different types
+
+Or even worse. Objects cannot be compared:
+Example
+var x = new Number(500);             
+var y = new Number(500);
+
+// (x == y) is false because objects cannot be compared
+
+JavaScript objects cannot be compared.
+
+-------------------------------------
+
+9) Types of error in javascript and error handling methods
+
+http://www.tutorialspoint.com/javascript/javascript_error_handling.htm
+
+-------------------------------------
+
+10) What is a “closure” in JavaScript? Provide an example
+
+A closure is a function defined inside another function (called the parent function), and has access to variables that are declared and defined in the parent function scope.
+
+The closure has access to variables in three scopes:
+
+    Variables declared in their own scope
+    Variables declared in a parent function scope
+    Variables declared in the global namespace
+
+var globalVar = "abc"; 
+
+// Parent self invoking function 
+(function outerFunction (outerArg) { // begin of scope outerFunction
+    // Variable declared in outerFunction function scope 
+    var outerFuncVar = 'x';    
+    // Closure self-invoking function 
+    (function innerFunction (innerArg) { // begin of scope innerFunction
+        // variable declared in innerFunction function scope
+        var innerFuncVar = "y"; 
+        console.log(          
+            "outerArg = " + outerArg + "\n" +
+            "outerFuncVar = " + outerFuncVar + "\n" +
+            "innerArg = " + innerArg + "\n" +
+            "innerFuncVar = " + innerFuncVar + "\n" +
+            "globalVar = " + globalVar);
+
+    }// end of scope innerFunction)(5); // Pass 5 as parameter 
+}// end of scope outerFunction )(7); // Pass 7 as parameter 
+
+innerFunction is closure that is defined inside outerFunction and has access to all variables declared and defined in the outerFunction scope. In addition, the function defined inside another function as a closure will have access to variables declared in the global namespace.
+
+Thus, the output of the code above would be:
+
+outerArg = 7
+outerFuncVar = x
+innerArg = 5
+innerFuncVar = y
+globalVar = abc
+
+-------------------------------------
