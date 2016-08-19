@@ -137,49 +137,7 @@ http://www.tutorialspoint.com/javascript/javascript_error_handling.htm
 
 -------------------------------------
 
-10) What is a “closure” in JavaScript? Provide an example
-
-A closure is a function defined inside another function (called the parent function), and has access to variables that are declared and defined in the parent function scope.
-
-The closure has access to variables in three scopes:
-
-    Variables declared in their own scope
-    Variables declared in a parent function scope
-    Variables declared in the global namespace
-
-var globalVar = "abc"; 
-
-// Parent self invoking function 
-(function outerFunction (outerArg) { // begin of scope outerFunction
-    // Variable declared in outerFunction function scope 
-    var outerFuncVar = 'x';    
-    // Closure self-invoking function 
-    (function innerFunction (innerArg) { // begin of scope innerFunction
-        // variable declared in innerFunction function scope
-        var innerFuncVar = "y"; 
-        console.log(          
-            "outerArg = " + outerArg + "\n" +
-            "outerFuncVar = " + outerFuncVar + "\n" +
-            "innerArg = " + innerArg + "\n" +
-            "innerFuncVar = " + innerFuncVar + "\n" +
-            "globalVar = " + globalVar);
-
-    }// end of scope innerFunction)(5); // Pass 5 as parameter 
-}// end of scope outerFunction )(7); // Pass 7 as parameter 
-
-innerFunction is closure that is defined inside outerFunction and has access to all variables declared and defined in the outerFunction scope. In addition, the function defined inside another function as a closure will have access to variables declared in the global namespace.
-
-Thus, the output of the code above would be:
-
-outerArg = 7
-outerFuncVar = x
-innerArg = 5
-innerFuncVar = y
-globalVar = abc
-
--------------------------------------
-
-11) Closure function
+10) Closure function
 
 function makeFunc() {
   var name = "Mozilla";
@@ -199,10 +157,24 @@ Normally, the local variables within a function only exist for the duration of t
 
 The solution to this puzzle is that myFunc has become a closure. A closure is a special kind of object that combines two things: a function, and the environment in which that function was created. The environment consists of any local variables that were in-scope at the time that the closure was created. In this case, myFunc is a closure that incorporates both the displayName function and the "Mozilla" string that existed when the closure was created.
 
+
+Example
+self-invoking functions
+
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+
+add();
+ add();
+ add();
+
+// the counter is now 3 
  
 ------------------------------------
 
-12) How to limit a field to accept only alphabets and space, no numbers and special characters
+11) How to limit a field to accept only alphabets and space, no numbers and special characters
 
 using regular expression
 var regex = /^[a-zA-Z ]*$/;	
@@ -210,9 +182,29 @@ regex.test(value); //it will return true or false
 
 ------------------------------------
 
-13) How to remove number from a string
+12) How to remove number from a string
 
 questionText = questionText.replace(/[0-9]/g, '');
 
 ------------------------------------
 
+13) Do you know OOPS concept? What is encapsulation?
+
+------------------------------------
+
+14) List each item in the array
+<button onclick="numbers.forEach(myFunction)">Try it</button>
+<p id="demo"></p>
+
+<script>
+demoP = document.getElementById("demo");
+var numbers = [4, 9, 16, 25];
+
+function myFunction(item, index) {
+    demoP.innerHTML = demoP.innerHTML + "index[" + index + "]: " + item + "<br />"; 
+}
+</script>
+
+
+The forEach() method calls a provided function once for each element in an array, in order.
+Note: forEach() does not execute the function for array elements without values.
