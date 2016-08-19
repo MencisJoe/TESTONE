@@ -213,6 +213,7 @@ Note: forEach() does not execute the function for array elements without values.
 
 15) Bubbling in javascript
 
+http://javascript.info/tutorial/bubbling-and-capturing
 ------------------------------------
 
 16) jquery advantage
