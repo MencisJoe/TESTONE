@@ -137,7 +137,7 @@ http://www.tutorialspoint.com/javascript/javascript_error_handling.htm
 
 -------------------------------------
 
-10) What is a ìclosureî in JavaScript? Provide an example
+10) What is a ‚Äúclosure‚Äù in JavaScript? Provide an example
 
 A closure is a function defined inside another function (called the parent function), and has access to variables that are declared and defined in the parent function scope.
 
@@ -178,3 +178,41 @@ innerFuncVar = y
 globalVar = abc
 
 -------------------------------------
+
+11) Closure function
+
+function makeFunc() {
+  var name = "Mozilla";
+  function displayName() {
+    alert(name);
+  }
+  return displayName;
+}
+
+var myFunc = makeFunc();
+myFunc();
+
+the string "Mozilla" will be displayed in a JavaScript alert box. 
+the displayName() inner function was returned from the outer function before being executed.
+
+Normally, the local variables within a function only exist for the duration of that function's execution. Once makeFunc() has finished executing, it is reasonable to expect that the name variable will no longer be accessible. Since the code still works as expected, this is obviously not the case.
+
+The solution to this puzzle is that myFunc has become a closure. A closure is a special kind of object that combines two things: a function, and the environment in which that function was created. The environment consists of any local variables that were in-scope at the time that the closure was created. In this case, myFunc is a closure that incorporates both the displayName function and the "Mozilla" string that existed when the closure was created.
+
+ 
+------------------------------------
+
+12) How to limit a field to accept only alphabets and space, no numbers and special characters
+
+using regular expression
+var regex = /^[a-zA-Z ]*$/;	
+regex.test(value); //it will return true or false
+
+------------------------------------
+
+13) How to remove number from a string
+
+questionText = questionText.replace(/[0-9]/g, '');
+
+------------------------------------
+
