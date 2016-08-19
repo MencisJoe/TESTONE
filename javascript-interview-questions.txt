@@ -208,3 +208,27 @@ function myFunction(item, index) {
 
 The forEach() method calls a provided function once for each element in an array, in order.
 Note: forEach() does not execute the function for array elements without values.
+
+------------------------------------
+
+15) Bubbling in javascript
+
+------------------------------------
+
+16) jquery advantage
+
+------------------------------------
+
+17) diff between bind and on in jquery
+
+------------------------------------
+
+18) syntax of ajax in javascript
+
+------------------------------------
+
+19) xml and jsom, which is better
+
+------------------------------------
+
+20) what is the use of jsonp
