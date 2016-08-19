@@ -222,14 +222,28 @@ http://javascript.info/tutorial/bubbling-and-capturing
 
 17) diff between bind and on in jquery
 
+http://stackoverflow.com/questions/11847021/jquery-bind-vs-on
 ------------------------------------
 
 18) syntax of ajax in javascript
 
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+     document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+} 
 ------------------------------------
 
 19) xml and json, which is better
 
+http://stackoverflow.com/questions/4862310/json-and-xml-comparison
 ------------------------------------
 
 20) what is the use of jsonp
+
+JSONP (JSON with Padding or JSON-P) is a JSON extension used by web developers to overcome the cross-domain restrictions imposed by browsers' same-origin policy that limits access to resources retrieved from origins other than the one the page was served by.
