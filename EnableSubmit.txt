@@ -1,10 +1,5 @@
-var x = $('#P1_EMAIL').val();
-var atpos = x.indexOf("@");
-var dotpos = x.lastIndexOf(".");
-	
-if($('#P1_FNAME').val()=='' ||$('#P1_LNAME').val()==''||$('#P1_MOBILE').val().length!=10||
-$('#P1_CUR_COMPANY').val()==''||$('#P1_CUR_CTC').val()==''||$('#P1_EXP_CTC').val()==''||$('#P1_NOT_PER_NEG').val()==''||
-$('#P1_TOT_EXP').val()==''||$('#P1_REL_EXP').val()==''||$('#P1_EMAIL').val()==''
-|| atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length || !($('input[name="p_t10"]:checked').length > 0) || !($('input[name="p_t11"]:checked').length > 0))
-{$x_disableItem('SUBMIT',true);console.log('a');}
-else{$x_disableItem('SUBMIT',false);console.log('b');}
+var foc=document.getElementById("P1_MOBILE" );
+x = $v("P1_MOBILE");
+alert(x + ' already exist. Please enter an unique mobile number');
+$x("P1_MOBILE").value = "";
+foc.focus();
