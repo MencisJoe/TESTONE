@@ -1,0 +1,6 @@
+if($('#P1_FNAME').val()=='' ||$('#P1_LNAME').val()==''||$('#P1_MOBILE').val().length!=10||
+$('#P1_CUR_COMPANY').val()==''||$('#P1_CUR_CTC').val()==''||$('#P1_EXP_CTC').val()==''||$('#P1_NOT_PER_NEG').val()==''||
+$('#P1_TOT_EXP').val()==''||$('#P1_REL_EXP').val()==''||$('#P1_EMAIL').val()==''
+|| !($('input[name="p_t10"]:checked').length > 0) || !($('input[name="p_t11"]:checked').length > 0))
+{$x_disableItem('SUBMIT',true);console.log('a');}
+else{$x_disableItem('SUBMIT',false);console.log('b');}
