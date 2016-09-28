@@ -5,3 +5,4 @@ if ( $( '#selectunselectall' ).is(':checked') ) {
 else {
   $('input[type=checkbox][name=f01]').attr('checked',false);
 }
+http://stackoverflow.com/questions/23927095/jquery-select-and-deselect-all-checkbox-link-works-only-once
