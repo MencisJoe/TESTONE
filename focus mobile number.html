@@ -12,11 +12,17 @@
 <script>
 $(document).ready(function(){
 	$('input').keyup(function(){
-	if($('this').val().length==$('this').attr('maxlength'))
+	if($(this).val().length==$(this).attr('maxlength'))
 {
-$('this').next('input').focus();
+$(this).next('input').focus();
 }
 });
+	$('input').keyup(function(){
+	if($('#three').val.length==$('#three').attr('maxlength'))
+	{
+	alert('fine');
+	}
+	});
 });
 </script>
 </html>
