@@ -10,31 +10,16 @@
 <input type="text" id="three" maxlength="4">
 </body>
 <script>
-var maxLength1 = $('#one').attr('maxlength');
-var maxLength2 = $('#two').attr('maxlength');
-var maxLength3 = $('#three').attr('maxlength');
 $(document).ready(function(){
 	$('input').keyup(function(){
-	var one = $("#one").val().length;
-	var two = $("#two").val().length;
-	var three = $("#three").val().length;
-	 if(one==maxLength1)
-	 {
-		$(this).next('input').focus();
-	 } 
-	 if(two==maxLength2)
-	 {
-		$(this).next('input').focus();
-	 } 	
-	 if(three==maxLength3)
-	 {
-		alert('Fine');
-	 } 
+	if($('this').val().length==$('this').attr('maxlength'))
+{
+$(this).next('input').focus();
+}
 });
 });
 </script>
 </html>
-
 
 --------
 
