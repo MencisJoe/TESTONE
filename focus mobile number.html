@@ -38,3 +38,48 @@ $(document).ready(function(){
 });
 </script>
 </html>
+
+
+--------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+</head>
+<body>
+<input type="text" id="one" maxlength="3" >
+<input type="text" id="two" maxlength="3">
+<input type="text" id="three" maxlength="4">
+</body>
+<script>
+var maxLength1 = $('#one').attr('maxlength');
+var maxLength2 = $('#two').attr('maxlength');
+var maxLength3 = $('#three').attr('maxlength');
+$(document).ready(function(){
+	$('#one').keyup(function(){
+	 var one = $("#one").val().length;
+	 if(one==maxLength1)
+	 {
+		$(this).next('input').focus();
+	 } 
+	});
+	$('#two').keyup(function(){
+	 var two = $("#two").val().length;
+	 if(two==maxLength2)
+	 {
+		$(this).next('input').focus();
+	 } 
+	});
+	$('#three').keyup(function(){
+	 var three = $("#three").val().length;
+	 if(three==maxLength3)
+	 {
+		alert('Fine');
+	 } 
+	});
+});
+</script>
+</html>
