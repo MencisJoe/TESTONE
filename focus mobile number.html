@@ -11,18 +11,13 @@
 </body>
 <script>
 $(document).ready(function(){
-	$('input').keyup(function(){
-	if($(this).val().length==$(this).attr('maxlength'))
+	$('input').keyup(function(e){
+	var code = e.keyCode;
+	if($(this).val().length==$(this).attr('maxlength') && code != '9')
 {
 $(this).next('input').focus();
 }
 });
-	$('input').keyup(function(){
-	if($('#three').val().length==$('#three').attr('maxlength'))
-	{
-	alert('fine');
-	}
-	});
 });
 </script>
 </html>
