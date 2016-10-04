@@ -49,7 +49,7 @@
 <script>
 $(document).ready(function(){
 	$('.add1').click(function(){
-		$(".add1").prepend('<li><div class="listdiv">New</div><p class="delete">New</p></li>');
+		$(".add1").parent().before('<li><div class="listdiv">New</div><p class="delete">New</p><p class="delete">New</p></li>');
 	});
 });
 </script>
