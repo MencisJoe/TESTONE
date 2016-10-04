@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+</head>
+<style>
+.account li{
+	display:inline-block;
+	padding:15px;
+}
+.listdiv{
+	background-color:lightblue;
+	padding:20px;
+	border-radius:45px;
+}
+.account p{
+	padding-left:10px;
+}
+#addaccount{
+	background-color:lightblue;
+	display:inline-block;
+}
+.add{
+	background-color:gray;
+	padding:10px;
+	padding-left:25px;
+	border-radius:70%;
+	margin-top:10px;
+}
+</style>
+<body>
+<div>
+<ul class='account'>
+	<li><div class='listdiv'>One</div>
+	    <p>Santhosh</p>
+		<p class='delete'>Delete</p></li>
+	<li><div class='listdiv'>Two</div>
+	    <p>Kumar</p>
+		<p class='delete'>Delete</p></li>
+	<li><div class='listdiv'>Three</div>
+	    <p>Sandy</p>
+		<p class='delete'>Delete</p></li>
+	<li><div class='add'>+</div>
+	    <p>Add</p>
+		<p>Account</p>
+</ul>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+	$('.add').click(function(){
+		$('ul').append('<li><div class='listdiv'>New</div></li>'.html());
+	});
+});
+</script>
+</html>
