@@ -1,8 +1,52 @@
-alert('ok');
-if ( $( '#selectunselectall' ).is(':checked') ) {
-  $('input[type=checkbox][name=f01]').attr('checked',true);
+<script type="text/javascript">
+ 
+    
+    function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + "." + seconds;
+         if(minutes==1 && seconds==0)
+             {
+                 /*alert('Test will lock out once the timer runs out and is submitted for validation');*/
+                 $('<div align="center"><br/>Test will lock out once the timer runs out <br/>and is submitted for validation <span style="font-weight:bold;"></span> </div>').dialog({
+                modal: true,
+                width:450,
+                title: 'Warning',
+                buttons: {
+                 Ok: function(){
+                 $(this).dialog( 'close' );
+      }
+    }
+  });
+             }
+        if(minutes==0 && seconds==0)
+            {
+                /*$('#timehide').html('Plese submit the test. The test is about to expire.');
+                setTimeout(function(){ $('#timehide').hide(); }, 3000);*/
+                window.location='f?p=&APP_ID.:11:&APP_SESSION.::NO::';
+                /*$('#timehide').hide();
+                $('#time').hide();
+                $('#lastback').hide();*/
+                /*var submitButton = document.getElementById("lastsubmit");
+                submitButton.click();*/
+            }
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
 }
-else {
-  $('input[type=checkbox][name=f01]').attr('checked',false);
-}
-http://stackoverflow.com/questions/23927095/jquery-select-and-deselect-all-checkbox-link-works-only-once
+
+function timer(minutes,seconds){
+    if(!minutes && !seconds){
+        minutes = 5;
+        seconds = 0;}
+    var startTime = (60 * minutes) + seconds,
+        display = document.querySelector('#time');
+    startTimer(startTime, display);
+};
+</script>
