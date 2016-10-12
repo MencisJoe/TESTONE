@@ -13,7 +13,7 @@
          if(minutes==1 && seconds==0)
              {
                  /*alert('Test will lock out once the timer runs out and is submitted for validation');*/
-                 $('<div align="center"><br/>Test will lock out once the timer runs out <br/>and is submitted for validation <span style="font-weight:bold;"></span> </div>').dialog({
+                 var box=$('<div align="center"><br/>Test will lock out once the timer runs out <br/>and is submitted for validation <span style="font-weight:bold;"></span> </div>').dialog({
                 modal: true,
                 width:450,
                 title: 'Warning',
@@ -23,6 +23,7 @@
       }
     }
   });
+setTimeout(function(){ box.dialog('close') }, 5000);
              }
         if(minutes==0 && seconds==0)
             {
