@@ -1,0 +1,39 @@
+x = $v("P12_VALIDATION");
+y = $v("P12_UNIQUE_CODE");
+/*alert(x);
+alert(y);
+$x_disableItem('starttest',false);*/
+if(!x && !y)
+{
+$('<div align="center"><br/> Please enter the credentials<span style="font-weight:bold;"></span> </div>').dialog({
+    modal: true,
+    width:450,
+    title: 'Warning',
+    buttons: {
+      Ok: function(){
+         $(this).dialog( 'close' );
+      }
+    }
+  });
+$x("P12_UNIQUE_CODE").value = "";
+$x("P12_EMAIL").value = "";
+}
+else if(x==y)
+{
+apex.submit();
+}
+else
+{
+$('<div align="center"><br/> Invalid credentials<span style="font-weight:bold;"></span> </div>').dialog({
+    modal: true,
+    width:450,
+    title: 'Warning',
+    buttons: {
+      Ok: function(){
+         $(this).dialog( 'close' );
+      }
+    }
+  });
+$x("P12_UNIQUE_CODE").value = "";
+$x("P12_EMAIL").value = "";
+}
