@@ -1,0 +1,19 @@
+SELECT
+  APEX_ITEM.CHECKBOX(1, ts_id, 'onclick="countChecked(this);"') "CHECK",
+.... from my_table where....
+
+<SCRIPT LANGUAGE="javascript">
+ 
+function countChecked(pThis){
+ var ml = document.wwv_flow;
+ var len = ml.elements.length;
+ var count = 0;
+ var current_votes = 2;
+ 
+ for (var j = 0; j < len; j++) {
+    var e = ml.elements[j];
+    e.checked = false;
+   pThis.checked = true;
+ }
+}  
+</SCRIPT>
