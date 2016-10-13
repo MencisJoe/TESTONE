@@ -22,7 +22,9 @@ function countChecked(pThis){
 
 Preethi :-)
 
-$('input[type="checkbox"]').on('change', function() {  
-  if ($(this).is(':checked'))
-    $('input[type="checkbox"]').not(this).prop('checked', false);  
-});
+function countChecked(pThis){
+  $('input[type="checkbox"]').on('change', function() {  
+    if ($(this).is(':checked'))
+      $('input[type="checkbox"]').not(this).prop('checked', false);  
+  });
+}
