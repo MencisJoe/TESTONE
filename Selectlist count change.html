@@ -18,7 +18,7 @@ th{
 .textb{
 	 margin:5%;
 }
-.rad{
+.rad1,.rad2,.rad3{
 	margin-left:45%;
 }
 .linefirst{
@@ -55,36 +55,36 @@ table,.first{
 </tr>
 <tr class="hrow">
 	<td><p class="line">Line number #1</p>
-	    <p class="line">Disconnect</p>
+	    <p class="line" id="change1">Disconnect</p>
 		<input type="text" id="one1" class="textb" maxlength="3" size="5">
 		<input type="text" id="two1" class="textb" maxlength="3" size="5">
 		<input type="text" id="three1" class="textb" maxlength="4" size="5">
 	</td>
-	<td><input type="radio" class="rad" name="line" value=""></td>
-    <td><input type="radio" class="rad" name="line" value=""></td>
-    <td><input type="radio" class="rad" name="line" value=""></td>	
+	<td><input type="radio" class="rad1" name="line1" value="Move to company"></td>
+    <td><input type="radio" class="rad1" name="line1" value="Leave with current provider"></td>
+    <td><input type="radio" class="rad1" name="line1" value="Disconnect"></td>	
 </tr>
 <tr class="hrow">
 	<td><p class="line">Line number #2</p>
-	    <p class="line">Disconnect</p>
+	    <p class="line" id="change2">Disconnect</p>
 		<input type="text" id="one2" class="textb" maxlength="3" size="5">
 		<input type="text" id="two2" class="textb" maxlength="3" size="5">
 		<input type="text" id="three2" class="textb" maxlength="4" size="5">
 	</td>
-	<td><input type="radio" class="rad" name="line" value=""></td>
-    <td><input type="radio" class="rad" name="line" value=""></td>
-    <td><input type="radio" class="rad" name="line" value=""></td>	
+	<td><input type="radio" class="rad2" name="line2" value="Move to company"></td>
+    <td><input type="radio" class="rad2" name="line2" value="Leave with current provider"></td>
+    <td><input type="radio" class="rad2" name="line2" value="Disconnect"></td>	
 </tr>
 <tr class="hrow">
 	<td><p class="line">Line number #3</p>
-	    <p class="line">Disconnect</p>
+	    <p class="line" id="change3">Disconnect</p>
 		<input type="text" id="one3" class="textb" maxlength="3" size="5">
 		<input type="text" id="two3" class="textb" maxlength="3" size="5">
 		<input type="text" id="three3" class="textb" maxlength="4" size="5">
 	</td>
-	<td><input type="radio" class="rad" name="line" value=""></td>
-    <td><input type="radio" class="rad" name="line" value=""></td>
-    <td><input type="radio" class="rad" name="line" value=""></td>	
+	<td><input type="radio" class="rad3" name="line3" value="Move to company"></td>
+    <td><input type="radio" class="rad3" name="line3" value="Leave with current provider"></td>
+    <td><input type="radio" class="rad3" name="line3" value="Disconnect"></td>	
 </tr>
 </table>
 </body>
@@ -111,6 +111,21 @@ $(document).ready(function(){
          $("tr:nth-of-type(4)").show();
          $("tr:nth-of-type(5)").show();
 		}
+	});
+	
+	$('.rad1').click(function(){
+		var value1 = $("input[name='line1']:checked").val();		
+		$( "#change1" ).html(value1);
+	});
+	
+	$('.rad2').click(function(){
+		var value2 = $("input[name='line2']:checked").val();		
+		$( "#change2" ).html(value2);
+	});
+	
+	$('.rad3').click(function(){
+		var value3 = $("input[name='line3']:checked").val();		
+		$( "#change3" ).html(value3);
 	});
 });
 </script>
