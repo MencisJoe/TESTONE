@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+</head>
+<style>
+table,th,td{
+	border:1px solid;
+	border-collapse: collapse;
+}
+th{
+	background-color:#ccc;
+}
+.line{
+	text-align:center;
+}
+.textb{
+	 margin:5%;
+}
+.rad{
+	margin-left:45%;
+}
+.linefirst{
+	display:inline;
+}
+table,.first{
+	margin-top:50px;
+}
+</style>
+<body>
+<div class="first">
+<p class="linefirst">Please select the number of lines pending: </p>
+<select name="numbers" class="line" id="myselect">
+  <option value="3">--Select--</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+</div>
+<table style="width:50%" id="mytable">
+<col width="20%">
+<col width="10%">
+<col width="10%">
+<col width="10%">
+<tr>
+	<th>Line Numbers</th>
+	<th colspan="3">Line Status</th>
+</tr>
+<tr height="80">
+	<th></th>
+	<th>Move to company</th>
+	<th>Leave with current provider</th>
+	<th>Disconnect</th>
+</tr>
+<tr>
+	<td><p class="line">Line number #1</p>
+	    <p class="line">Disconnect</p>
+		<input type="text" id="one1" class="textb" maxlength="3" size="5">
+		<input type="text" id="two1" class="textb" maxlength="3" size="5">
+		<input type="text" id="three1" class="textb" maxlength="4" size="5">
+	</td>
+	<td><input type="radio" class="rad" name="line" value=""></td>
+    <td><input type="radio" class="rad" name="line" value=""></td>
+    <td><input type="radio" class="rad" name="line" value=""></td>	
+</tr>
+<tr>
+	<td><p class="line">Line number #2</p>
+	    <p class="line">Disconnect</p>
+		<input type="text" id="one2" class="textb" maxlength="3" size="5">
+		<input type="text" id="two2" class="textb" maxlength="3" size="5">
+		<input type="text" id="three2" class="textb" maxlength="4" size="5">
+	</td>
+	<td><input type="radio" class="rad" name="line" value=""></td>
+    <td><input type="radio" class="rad" name="line" value=""></td>
+    <td><input type="radio" class="rad" name="line" value=""></td>	
+</tr>
+<tr>
+	<td><p class="line">Line number #3</p>
+	    <p class="line">Disconnect</p>
+		<input type="text" id="one3" class="textb" maxlength="3" size="5">
+		<input type="text" id="two3" class="textb" maxlength="3" size="5">
+		<input type="text" id="three3" class="textb" maxlength="4" size="5">
+	</td>
+	<td><input type="radio" class="rad" name="line" value=""></td>
+    <td><input type="radio" class="rad" name="line" value=""></td>
+    <td><input type="radio" class="rad" name="line" value=""></td>	
+</tr>
+</table>
+</body>
+<script>
+$(document).ready(function(){
+	$('select').on('change',function(){
+		var value = $('#myselect').val()
+		/*$('#mytable tr').length=value;*/
+		$('#mytable tr').attr('rows', value);
+	});
+});
+</script>
+</html>
