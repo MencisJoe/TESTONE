@@ -53,7 +53,7 @@ table,.first{
 	<th>Leave with current provider</th>
 	<th>Disconnect</th>
 </tr>
-<tr>
+<tr class="hrow">
 	<td><p class="line">Line number #1</p>
 	    <p class="line">Disconnect</p>
 		<input type="text" id="one1" class="textb" maxlength="3" size="5">
@@ -64,7 +64,7 @@ table,.first{
     <td><input type="radio" class="rad" name="line" value=""></td>
     <td><input type="radio" class="rad" name="line" value=""></td>	
 </tr>
-<tr>
+<tr class="hrow">
 	<td><p class="line">Line number #2</p>
 	    <p class="line">Disconnect</p>
 		<input type="text" id="one2" class="textb" maxlength="3" size="5">
@@ -75,7 +75,7 @@ table,.first{
     <td><input type="radio" class="rad" name="line" value=""></td>
     <td><input type="radio" class="rad" name="line" value=""></td>	
 </tr>
-<tr>
+<tr class="hrow">
 	<td><p class="line">Line number #3</p>
 	    <p class="line">Disconnect</p>
 		<input type="text" id="one3" class="textb" maxlength="3" size="5">
@@ -93,7 +93,24 @@ $(document).ready(function(){
 	$('select').on('change',function(){
 		var value = $('#myselect').val()
 		/*$('#mytable tr').length=value;*/
-		$('#mytable tr').attr('rows', value);
+		if(value==1)
+		{
+		 $("tr:nth-of-type(3)").show();
+         $("tr:nth-of-type(4)").hide();
+         $("tr:nth-of-type(5)").hide();  		 
+		}
+		else if(value==2)
+		{
+		 $("tr:nth-of-type(3)").show();
+         $("tr:nth-of-type(4)").show();
+         $("tr:nth-of-type(5)").hide();
+		}
+		else
+		{
+		 $("tr:nth-of-type(3)").show();
+         $("tr:nth-of-type(4)").show();
+         $("tr:nth-of-type(5)").show();
+		}
 	});
 });
 </script>
