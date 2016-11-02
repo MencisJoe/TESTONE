@@ -3,5 +3,5 @@ var x=$('.rowselect[headers="column1"]').text();
 var y=$('.rowselect[headers="column2"]').text();
 $('.rowselect[headers="column1"]').text('');
 $('.rowselect[headers="column2"]').text('');
-$('ul#deleted_list').append('<li id="'+id'">+<span id="firstVal">x+'</span>
-<span id="secondVal">+y+'</span></li>');
+$('ul#deleted_list').append('<li id="'+id'"><span id="firstVal">'+x+'</span>
+<span id="secondVal">'+y+'</span></li>');
