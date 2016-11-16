@@ -51,4 +51,3 @@ else if (dtMonth == 2) {
 }
     }
  return true;
-}
