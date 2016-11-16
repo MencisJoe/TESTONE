@@ -1,0 +1,54 @@
+var x=$v('P2_BEGIN_DATE');
+var rxDatePattern = /^(\d{1,2})(\/|-)(?:(\d{1,2})|(jan)|(feb)|(mar)|(apr)|(may)|(jun)|(jul)|(aug)|(sep)|(oct)|(nov)|(dec))(\/|-)(\d{4})$/i;
+if (x == '') 
+{
+alert('Please enter the date');
+return false;
+}
+
+var dtArray = x.match(rxDatePattern);
+
+if (dtArray == null)
+{
+alert("Incorrect format. Please follow 'DD-MON-YYYY' format");
+return false;
+}
+
+var dtDay = parseInt(dtArray[1]);
+var dtMonth = parseInt(dtArray[3]);
+var dtYear = parseInt(dtArray[17]);
+
+if (isNaN(dtMonth)) {
+        for (var i = 4; i <= 15; i++) {
+            if ((dtArray[i])) {
+                dtMonth = i - 3;
+                break;
+            }
+        }
+    }
+
+if (dtMonth < 1 || dtMonth > 12)
+{ 
+alert("Invalid month. Please follow 'DD-MON-YYYY' format"); 
+return false;
+}
+else if (dtDay < 1 || dtDay > 31)
+{
+alert("Invalid day. Please follow 'DD-MON-YYYY' format");
+return false;
+}
+else if ((dtMonth == 4 || dtMonth == 6 || dtMonth == 9 || dtMonth == 11) && dtDay == 31)
+{
+alert("Invalid day. Please follow 'DD-MON-YYYY' format");
+return false;
+}
+else if (dtMonth == 2) {
+        var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
+        if (dtDay > 29 || (dtDay == 29 && !isleap))
+{
+ alert("Invalid day. Please follow 'DD-MON-YYYY' format");   
+ return false;
+}
+    }
+ return true;
+}
