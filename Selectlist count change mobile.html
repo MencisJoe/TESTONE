@@ -1,3 +1,12 @@
+//Date picker format validation
+(For format 1-Feb-2016)
+http://jsfiddle.net/YuDE8/4/
+
+(If you can change Date format to DD/MM/YYYY use this apex validation)
+function isValidDate(pValue) {  var isValidDate = false;  // date format is DD/MM/YYYY  var dateFormatRegex = new RegExp("^(3[01]|[12][0-9]|0?[1-9])/(1[0-2]|0?[1-9])/(?:[0-9]{2})?[0-9]{2}$");   if (pValue.match(dateFormatRegex)) {    // seems that the date format is correct, but can we parse the date to a date object?    var dateArray = pValue.split("/");    var year = parseInt(dateArray[2]);    var month = parseInt(dateArray[1], 10);    var day = parseInt(dateArray[0], 10);    var date = new Date(year, month - 1, day);     if (((date.getMonth() + 1) === month) && (date.getDate() === day) && (date.getFullYear() === year)) {      isValidDate = true;    }  }   return isValidDate;}
+
+
+//Jquery Excercises
 http://www.w3resource.com/jquery-exercises/jquery-core-exercises.php
 
 
