@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+</head>
+<style>
+.container{
+border:5px solid;
+padding:50px;
+}
+.time_class{
+list-style-type:none;
+margin-left:16%;
+}
+.time_class li{
+border:2px solid;
+width:40px;
+padding:3px;
+cursor:pointer;
+}
+</style>
+<body>
+<div class="container">
+<ul class="time_class">
+	<li id="eight">8AM</li>
+	<li id="nine">9AM</li>
+	<li id="ten">10AM</li>
+	<li id="eleven">11AM</li>
+	<li id="twelve">12AM</li>
+	<li id="one">1PM</li>
+	<li id="two">2PM</li>
+	<li id="three">3PM</li>
+	<li id="four">4PM</li>
+	<li id="five">5PM</li>
+	<li id="six">6PM</li>
+</ul>
+Enter the time:  <input type="text" id="time" placeholder="Type here">
+<span id="caret">&#9660;</span>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+ $('#caret').click(function(){
+ $('.time_class').toggle();
+ });
+});
+</script>
+</html>
