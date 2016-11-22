@@ -12,37 +12,70 @@ padding:50px;
 .time_class{
 list-style-type:none;
 margin-left:16%;
+display:none;
+}
+.crctTime{
+list-style-type:none;
+margin-left:16%;
 }
 .time_class li{
 border:2px solid;
-width:40px;
+width:50px;
 padding:3px;
 cursor:pointer;
+}
+.hide_ul{
+display:none;
 }
 </style>
 <body>
 <div class="container">
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+<p>Four</p>
+<p>Five</p>
+<p>Six</p>
+<p>Seven</p>
+<p>Eight</p>
+<p>Nine</p>
+<p>Ten</p>
 <ul class="time_class">
-	<li id="eight">8AM</li>
-	<li id="nine">9AM</li>
-	<li id="ten">10AM</li>
-	<li id="eleven">11AM</li>
-	<li id="twelve">12AM</li>
-	<li id="one">1PM</li>
-	<li id="two">2PM</li>
-	<li id="three">3PM</li>
-	<li id="four">4PM</li>
-	<li id="five">5PM</li>
-	<li id="six">6PM</li>
+	<li id="eight" class="clkTime">8 AM</li>
+	<li id="nine" class="clkTime">9 AM</li>
+	<li id="ten" class="clkTime">10 AM</li>
+	<li id="eleven" class="clkTime">11 AM</li>
+	<li id="twelve" class="clkTime">12 AM</li>
+	<li id="one" class="clkTime">1 PM</li>
+	<li id="two" class="clkTime">2 PM</li>
+	<li id="three" class="clkTime">3 PM</li>
+	<li id="four" class="clkTime">4 PM</li>
+	<li id="five" class="clkTime">5 PM</li>
+	<li id="six" class="clkTime">6 PM</li>
 </ul>
-Enter the time:  <input type="text" id="time" placeholder="Type here">
+<span id="lab">Enter the time:</span>  <input type="text" id="time" placeholder="Type here">
 <span id="caret">&#9660;</span>
+<ul class="crctTime"></ul>
 </div>
 </body>
 <script>
 $(document).ready(function(){
  $('#caret').click(function(){
  $('.time_class').toggle();
+ });
+ $('.clkTime').click(function(){
+ $(".crctTime").addClass("hide_ul");
+ $(".crctTime").removeClass("hide_ul");
+ var x=$(this).text();
+ var arr=x.split(' ');
+ var time1=arr[0];
+ var time2=arr[1];
+ /*alert(time1);
+ alert(time2);*/
+ $('<li />', {html: time1+' '+time2}).appendTo('ul.crctTime');
+ $('<li />', {html: time1+':15'+time2}).appendTo('ul.crctTime');
+ $('<li />', {html: time1+':30'+time2}).appendTo('ul.crctTime');
+ $('<li />', {html: time1+':45'+time2}).appendTo('ul.crctTime');
  });
 });
 </script>
