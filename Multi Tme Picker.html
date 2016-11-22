@@ -76,8 +76,8 @@ $(document).ready(function(){
  $('<li />', {html: time1+':30'+time2}).appendTo('ul.crctTime');
  $('<li />', {html: time1+':45'+time2}).appendTo('ul.crctTime');
  });
- $("#list_t_railway li").on("click", function(){
-  alert($(this).text());
+ $(".crctTime li").on("click", 'li', function(){
+  alert($(this).html());
 });
 });
 </script>
