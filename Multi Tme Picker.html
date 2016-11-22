@@ -87,6 +87,8 @@ $(document).on('click',".crctTime li",function() {
    /*alert($(this).html());*/
    var ans=$(this).html();
    $("#time").val(ans);
+   $('.time_class').hide();
+   $('.crctTime li').remove();
 });
 </script>
 </html>
