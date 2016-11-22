@@ -30,10 +30,10 @@ position: absolute;
 }
 @media only screen and (max-width: 480px) {
 .time_class{
-margin-left:90px;
+margin-left:70px;
 }
 .crctTime{
-margin-left:145px;
+margin-left: 130px;
 }
 }
 .time_class li{
@@ -105,8 +105,8 @@ $(document).ready(function(){
  var arr=x.split(' ');
  var time1=arr[0];
  var time2=arr[1];
- /*alert(time1);
- alert(time2);*/
+var position = $(this).position();
+$('ul.crctTime').css('top', (position.top+85)+'px');
  $('<li />', {html: time1+' '+time2}).appendTo('ul.crctTime');
  $('<li />', {html: time1+':15'+time2}).appendTo('ul.crctTime');
  $('<li />', {html: time1+':30'+time2}).appendTo('ul.crctTime');
