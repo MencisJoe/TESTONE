@@ -9,59 +9,80 @@
 border:5px solid;
 padding:50px;
 }
+ .time-selector {
+position: relative;
+}
 .time_class{
 list-style-type:none;
-margin-left:16%;
 display:none;
+margin-left:200px;
+z-index: 1001;
+float: left;
+position: absolute;
 }
 .crctTime{
 list-style-type:none;
-margin-left:16%;
+margin-left:260px;
+z-index: 1001;
+float: left;
+position: absolute;
 }
 .time_class li{
 border:2px solid;
 width:50px;
 padding:3px;
 cursor:pointer;
+background: black;
+opacity: 0.7;
+color: #fff;
 }
  .crctTime li{
  border:2px solid;
 width:60px;
 padding:3px;
 cursor:pointer;
+background: black;
+opacity: 0.7;
+color: #fff;
  }
+.p-text {
+z-index: 1000;
+}
 .hide_ul{
 display:none;
 }
 </style>
 <body>
 <div class="container">
-<p>One</p>
-<p>Two</p>
-<p>Three</p>
-<p>Four</p>
-<p>Five</p>
-<p>Six</p>
-<p>Seven</p>
-<p>Eight</p>
-<p>Nine</p>
-<p>Ten</p>
-<ul class="time_class">
-	<li id="eight" class="clkTime">8 AM</li>
-	<li id="nine" class="clkTime">9 AM</li>
-	<li id="ten" class="clkTime">10 AM</li>
-	<li id="eleven" class="clkTime">11 AM</li>
-	<li id="twelve" class="clkTime">12 AM</li>
-	<li id="one" class="clkTime">1 PM</li>
-	<li id="two" class="clkTime">2 PM</li>
-	<li id="three" class="clkTime">3 PM</li>
-	<li id="four" class="clkTime">4 PM</li>
-	<li id="five" class="clkTime">5 PM</li>
-	<li id="six" class="clkTime">6 PM</li>
-</ul>
-<span id="lab">Enter the time:</span>  <input type="text" id="time" placeholder="Type here">
-<span id="caret">&#9660;</span>
-<ul class="crctTime"></ul>
+
+	<div class="time-selector">
+		<span id="lab">Enter the time:</span>  <input type="text" id="time" placeholder="Type here">
+		<span id="caret">&#9660;</span>
+	</div>
+	<ul class="time_class">
+		<li id="eight" class="clkTime">8 AM</li>
+		<li id="nine" class="clkTime">9 AM</li>
+		<li id="ten" class="clkTime">10 AM</li>
+		<li id="eleven" class="clkTime">11 AM</li>
+		<li id="twelve" class="clkTime">12 AM</li>
+		<li id="one" class="clkTime">1 PM</li>
+		<li id="two" class="clkTime">2 PM</li>
+		<li id="three" class="clkTime">3 PM</li>
+		<li id="four" class="clkTime">4 PM</li>
+		<li id="five" class="clkTime">5 PM</li>
+		<li id="six" class="clkTime">6 PM</li>
+	</ul>
+	<ul class="crctTime"></ul>
+	<div class="p-text">
+		<p>I would like to position the navigation bar on the "header" (so the brown top of the navigation is just below the header bottom), so the gap disappears. These images are meant to overlap. </p>
+		<p>I would like to position the navigation bar on the "header" (so the brown top of the navigation is just below the header bottom), so the gap disappears. These images are meant to overlap. </p>
+		<p>I would like to position the navigation bar on the "header" (so the brown top of the navigation is just below the header bottom), so the gap disappears. These images are meant to overlap. </p>
+		<p>I would like to position the navigation bar on the "header" (so the brown top of the navigation is just below the header bottom), so the gap disappears. These images are meant to overlap. </p>
+		<p>I would like to position the navigation bar on the "header" (so the brown top of the navigation is just below the header bottom), so the gap disappears. These images are meant to overlap. </p>	
+		<p>I would like to position the navigation bar on the "header" (so the brown top of the navigation is just below the header bottom), so the gap disappears. These images are meant to overlap. </p>
+		<p>I would like to position the navigation bar on the "header" (so the brown top of the navigation is just below the header bottom), so the gap disappears. These images are meant to overlap. </p>		
+	</div>
+
 </div>
 </body>
 <script>
