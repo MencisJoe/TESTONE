@@ -64,8 +64,7 @@ $(document).ready(function(){
  $('.time_class').toggle();
  });
  $('.clkTime').click(function(){
- $(".crctTime").addClass("hide_ul");
- $(".crctTime").removeClass("hide_ul");
+ $(".crctTime").empty()
  var x=$(this).text();
  var arr=x.split(' ');
  var time1=arr[0];
