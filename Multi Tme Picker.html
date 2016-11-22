@@ -18,12 +18,18 @@ display:none;
 list-style-type:none;
 margin-left:16%;
 }
-.time_class li, .crctTime li{
+.time_class li{
 border:2px solid;
 width:50px;
 padding:3px;
 cursor:pointer;
 }
+ .crctTime li{
+ border:2px solid;
+width:60px;
+padding:3px;
+cursor:pointer;
+ }
 .hide_ul{
 display:none;
 }
@@ -76,9 +82,11 @@ $(document).ready(function(){
  $('<li />', {html: time1+':30'+time2}).appendTo('ul.crctTime');
  $('<li />', {html: time1+':45'+time2}).appendTo('ul.crctTime');
  });
- $(".crctTime li").on("click", 'li', function(){
-  alert($(this).html());
 });
+$(document).on('click',".crctTime li",function() {
+   /*alert($(this).html());*/
+   var ans=$(this).html();
+   $("#time").val(ans);
 });
 </script>
 </html>
