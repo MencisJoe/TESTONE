@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+</head>
+<style>
+.myUl{
+    list-style-type:none;
+}
+
+.tog{
+    cursor:pointer;
+}
+</style>
+<body>
+<div class="myContainer">
+    <ul class="myUl">
+        <li id="one" class="fhalf">This is first line</li>
+        <li id="two" class="fhalf">This is second line</li>
+        <li id="more" class="tog" style="color:skyblue;"><i>view more....</i></li>
+        <li id="three" class="shalf">This is third line</li>
+        <li id="four" class="shalf">This is fourth line</li>
+        <li id="five"class="shalf">This is fifth line</li>
+        <li id="less" class="shalf tog" style="color:skyblue;"><i>less....</i></li>
+    </ul>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+	$("li:gt(2)").hide();
+});
+$("#more").click(function(){
+	$(this).hide(); 
+    $(".shalf").toggle();
+});
+
+$("#less").click(function(){ 
+	$(".shalf").toggle();
+    $("#more").show();
+    $(this).hide();
+});
+</script>
+</html>
