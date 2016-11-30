@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajx/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <style>
 .container{
@@ -57,7 +57,32 @@ This paragraph is for home5 tab.This paragraph is for home5 tab.This paragraph i
 </body>
 <script>
 $(document).ready(function(){
-	alert('hi');
+	$('.my_para').not('#one_p').hide();
+	$('#one').click()
+	{
+		$('.my_para').hide();
+		$('#one_p').show();	
+	}
+	$('#two').click()
+	{
+		$('.my_para').hide();
+		$('#two_p').show();	
+	}
+	$('#three').click()
+	{
+		$('.my_para').hide();
+		$('#three_p').show();	
+	}
+	$('#four').click()
+	{
+		$('.my_para').hide();
+		$('#four_p').show();	
+	}
+	$('#five').click()
+	{
+		$('.my_para').hide();
+		$('#five_p').show();	
+	}
 });
 </script>
 </html>
